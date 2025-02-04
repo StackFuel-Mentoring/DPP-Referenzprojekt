@@ -1,0 +1,18 @@
+[project]
+name = "testordner"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jupyter",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "tqdm>=4.67.1",
+    "statsmodels>=0.14.4",
+    "kagglehub>=0.3.6",
+]
+ 
