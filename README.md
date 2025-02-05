@@ -49,7 +49,13 @@ StackFuel_Referenzprojekt/
 
 ## Voraussetzungen
 
-Für dieses Projekt benötigen Sie Python und den Paketmanager uv.
+Für dieses Projekt benötigen Sie Python und den Paketmanager uv. Alle weiteren Abhängigkeiten sind in der `pyproject.toml` Datei bzw. in der `uv.lock` dokumentiert.
+
+Du kannst Python von der offiziellen Homepage [python.org](https://www.python.org/) herunterladen und installieren. Alternativ kannst du auch einen Packetmanager wie Homebrew (MacOS), winget (Windows) oder apt (Ubuntu) nutzen.
+
+
+Du kannst den Packetmanager uv installieren indem du den Anweisungen auf der offiziellen GitHub Page von uv folgst: [uv on GitHub](https://github.com/astral-sh/uv)
+
 
 ### macOS
 
@@ -63,11 +69,12 @@ Für dieses Projekt benötigen Sie Python und den Paketmanager uv.
 
 2. **uv installieren**:
 
-   Nachdem Homebrew installiert ist, führen Sie:
+   Nachdem Homebrew installiert ist, führen Sie folgenden Befehl im Terminal aus:
 
    ```bash
    brew install uv
    ```
+
 
 ### Linux
 
@@ -144,7 +151,6 @@ Die Datei `EDA_flight_prices.ipynb` stellt eine Beispielhafte EDA an dem Datensa
 - **NumPy**: Numerische Berechnungen.
 - **Matplotlib & Seaborn**: Datenvisualisierung.
 - **Scikit-Learn**: Maschinelles Lernen (optional).
-- **tqdm**: Fortschrittsbalken für Loops.
 - **Statsmodels**: Statistische Modellierung.
 - **kagglehub**: Vereinfachtes Herunterladen von Kaggle-Datensätzen.
 
