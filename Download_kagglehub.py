@@ -3,7 +3,7 @@ import os
 import shutil
 
 # Download latest version
-path = kagglehub.dataset_download("shubhambathwal/flight-price-prediction")
+path = kagglehub.dataset_download("shubhambathwal/flight-price-prediction", force_download=True)
 
 print(path)
 
