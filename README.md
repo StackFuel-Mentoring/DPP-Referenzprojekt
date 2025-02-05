@@ -37,8 +37,8 @@ StackFuel_Referenzprojekt/
 └── uv.lock
 ```
 
-- **.venv/**: Virtuelle Umgebung für das Projekt.
-- **data/**: Ordner für die heruntergeladenen Datensätze.
+- **.venv/**: Virtuelle Python Umgebung für das Projekt. (Wird durch `uv init` erstellt und von git ignoriert)
+- **data/**: Ordner für die heruntergeladenen Datensätze. (Wird durch das Script `Download_kagglehub.py` erstellt)
 - **.gitignore**: Definiert, welche Dateien von der Versionskontrolle ausgeschlossen werden.
 - **.python-version**: Spezifiziert die Python-Version (>=3.13).
 - **Download_kagglehub.py**: Skript zum Herunterladen der Datensätze von Kaggle.
@@ -51,9 +51,7 @@ StackFuel_Referenzprojekt/
 
 Für dieses Projekt benötigen Sie Python und den Paketmanager uv.
 
-### Installation von Python und uv
-
-#### macOS
+### macOS
 
 1. **Homebrew installieren** (falls nicht bereits installiert):
    
@@ -71,7 +69,7 @@ Für dieses Projekt benötigen Sie Python und den Paketmanager uv.
    brew install uv
    ```
 
-#### Linux
+### Linux
 
 Installieren Sie Python und uv mit ihrem jeweiligen Packetmanager.
 
@@ -84,7 +82,7 @@ Für Debian/Ubuntu mit:
    ```
 
 
-#### Windows
+### Windows
 
 1. **Winget installieren** (falls nicht bereits installiert):
 
@@ -108,8 +106,10 @@ Sobald Python und uv installiert sind, können Sie das Projekt initialisieren un
 
    ```bash
    git clone <REPOSITORY_URL>
-   cd StackFuel_Referenzprojekt
+   cd DPP-Referenzprojekt
    ```
+
+
 
 2. **Virtuelle Umgebung einrichten**
 
