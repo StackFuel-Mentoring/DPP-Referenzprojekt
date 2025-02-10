@@ -14,5 +14,7 @@ dependencies = [
     "tqdm>=4.67.1",
     "statsmodels>=0.14.4",
     "kagglehub>=0.3.6",
+    "optuna>=4.2.0",
+    "plotly>=6.0.0",
 ]
  
