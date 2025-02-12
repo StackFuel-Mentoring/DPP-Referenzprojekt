@@ -87,6 +87,17 @@ preprocessor = ColumnTransformer(transformers=[
     ("num", num_pipe, NUM_COLS),
 ])
 
+def get_preprocessor():
+    """
+    Returns a new instance of the preprocessor pipeline.
+    """
+    preprocessor = ColumnTransformer(transformers=[
+        ("cat", cat_pipe, CAT_COLS),
+        ("concat", concat_pipe, CONCAT_COLS),
+        ("num", num_pipe, NUM_COLS),
+    ])
+    return preprocessor
+
 def main():
     """
     Example usage of the preprocessor pipeline.
@@ -105,6 +116,7 @@ def main():
     y = df["price"]
 
     # Fit the preprocessor on the data
+    preprocessor = get_preprocessor()
     X_preprocessed = preprocessor.fit_transform(X)
 
     logging.info("Preprocessing completed.")
