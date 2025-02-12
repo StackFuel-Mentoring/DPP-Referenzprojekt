@@ -54,13 +54,12 @@ def concat_features(X, separator="_"):
     array([['a_b']], dtype=object)
     """
     if isinstance(X, pd.DataFrame):
-        concatenated = X.apply(lambda row: separator.join(row.astype(str)), axis=1)
-        return concatenated.values.reshape(-1, 1)
-    else:  # if X is a numpy array
-        concatenated = np.apply_along_axis(
-            lambda row: separator.join(row.astype(str)), axis=1, arr=X
-        )
-        return concatenated.reshape(-1, 1)
+        X_values = X.values
+    else:
+        X_values = X
+
+    concatenated = [separator.join(map(str, row)) for row in X_values]
+    return np.array(concatenated).reshape(-1, 1)
 
 # Pipeline for processing categorical features
 cat_pipe = Pipeline(steps=[
