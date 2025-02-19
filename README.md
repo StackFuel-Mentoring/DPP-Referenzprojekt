@@ -15,7 +15,6 @@ Willkommen zum StackFuel Referenzprojekt! Dieses Projekt dient als Leitfaden fü
 - [Testen](#testen)
 - [Verwendete Technologien und Bibliotheken](#verwendete-technologien-und-bibliotheken)
 - [Anleitung für Teilnehmende](#anleitung-für-teilnehmende)
-- [Kontakt](#kontakt)
 
 ---
 
