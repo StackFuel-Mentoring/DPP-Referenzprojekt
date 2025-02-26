@@ -94,11 +94,6 @@ def get_preprocessor():
         ("num", num_pipe, NUM_COLS),
     ])
     
-    preprocessor = ColumnTransformer(transformers=[
-        ("cat", cat_pipe, CAT_COLS),
-        ("concat", concat_pipe, CONCAT_COLS),
-        ("num", num_pipe, NUM_COLS),
-    ])
     return preprocessor
 
 def main():
