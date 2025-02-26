@@ -61,36 +61,39 @@ def concat_features(X, separator="_"):
     concatenated = [separator.join(map(str, row)) for row in X_values]
     return np.array(concatenated).reshape(-1, 1)
 
-# Pipeline for processing categorical features
-cat_pipe = Pipeline(steps=[
-    ("imputer", SimpleImputer(strategy="constant", fill_value="missing")),
-    ("onehot", OneHotEncoder(handle_unknown='ignore')),
-])
 
-# Pipeline for concatenating and encoding specified features
-concat_pipe = Pipeline(steps=[
-    ("imputer", SimpleImputer(strategy="constant", fill_value="missing")),
-    ("concatenator", FunctionTransformer(concat_features, validate=False)),
-    ("onehot", OneHotEncoder(handle_unknown='ignore')),
-])
-
-# Pipeline for processing numerical features
-num_pipe = Pipeline(steps=[
-    ("imputer", SimpleImputer(strategy="mean")),
-    ("scaler", StandardScaler()),
-])
-
-# Combine all pipelines into a single preprocessor
-preprocessor = ColumnTransformer(transformers=[
-    ("cat", cat_pipe, CAT_COLS),
-    ("concat", concat_pipe, CONCAT_COLS),
-    ("num", num_pipe, NUM_COLS),
-])
 
 def get_preprocessor():
     """
     Returns a new instance of the preprocessor pipeline.
     """
+    
+    # Pipeline for processing categorical features
+    cat_pipe = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="constant", fill_value="missing")),
+        ("onehot", OneHotEncoder(handle_unknown='ignore')),
+    ])
+
+    # Pipeline for concatenating and encoding specified features
+    concat_pipe = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="constant", fill_value="missing")),
+        ("concatenator", FunctionTransformer(concat_features, validate=False)),
+        ("onehot", OneHotEncoder(handle_unknown='ignore')),
+    ])
+
+    # Pipeline for processing numerical features
+    num_pipe = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="mean")),
+        ("scaler", StandardScaler()),
+    ])
+
+    # Combine all pipelines into a single preprocessor
+    preprocessor = ColumnTransformer(transformers=[
+        ("cat", cat_pipe, CAT_COLS),
+        ("concat", concat_pipe, CONCAT_COLS),
+        ("num", num_pipe, NUM_COLS),
+    ])
+    
     preprocessor = ColumnTransformer(transformers=[
         ("cat", cat_pipe, CAT_COLS),
         ("concat", concat_pipe, CONCAT_COLS),
