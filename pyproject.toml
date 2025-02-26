@@ -17,5 +17,10 @@ dependencies = [
     "optuna>=4.2.0",
     "plotly>=6.0.0",
     "pytest>=8.3.4",
+    "ruff>=0.9.6",
 ]
- 
+
+[tool.ruff.lint]
+select = [
+    "N",
+]
