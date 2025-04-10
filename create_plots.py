@@ -5,7 +5,7 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
 
-
+# global constants
 DPI = 100
 FIGSIZE_LARGE = (10, 5)
 FIGSIZE_SMALL = (5, 5)
