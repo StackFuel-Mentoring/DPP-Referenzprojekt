@@ -199,4 +199,4 @@ Dies lädt den Datensatz von Kaggle herunter und verschiebt die Dateien in den O
 - **Testen**: Schreiben Sie Tests für Ihre Funktionen, um die Zuverlässigkeit Ihres Codes sicherzustellen.
 - **Dokumentation**: Kommentieren Sie Ihren Code und dokumentieren Sie Ihre Ergebnisse ausführlich.
 
-Wir wünschen Ihnen viel Erfolg und Freude bei Ihrem Projekt!
+Wir wünschen dir viel Erfolg und Freude bei deinem Projekt!
